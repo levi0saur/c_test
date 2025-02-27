@@ -1,8 +1,8 @@
-all:  hello
+CC = gcc
+CFLAGS = -Wall -g
 
-hello:  hello_world.c
-  gcc -o hello_world hello_world.c
-  ./hello_world
-clean:  
-  rm -rf hello
-  
+all:	hello_world.c
+	${CC} ${CFLAGS} hello_world.c -o hello_world
+	./hello_world
+clean:
+	rm -rf hello_world
